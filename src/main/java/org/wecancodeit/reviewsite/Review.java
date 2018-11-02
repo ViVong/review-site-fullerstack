@@ -24,11 +24,11 @@ public class Review {
 	private String content;
 	
 	@ManyToMany
-	private Collection<Category> categories;
+	private Collection<Tag> categories;
 
     protected Review() {}
 
-    public Review(int month, int date, String title, String url, String content, Category...categories) {
+    public Review(int month, int date, String title, String url, String content, Tag...categories) {
 		this.month = month;
 		this.date = date;
 		this.title = title;
@@ -57,7 +57,7 @@ public class Review {
 		return id;
 	}
 	
-	public Collection<Category> getCategories() {
+	public Collection<Tag> getCategories() {
 		return categories;
 	}
 

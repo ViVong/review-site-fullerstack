@@ -12,14 +12,14 @@ public class ReviewPopulator implements CommandLineRunner{
 	private ReviewRepository reviewRepo;
 	
 	@Resource
-	private CategoryRepository categoryRepo;
+	private TagRepository categoryRepo;
 	
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Category top10 = new Category("Top 10s");
-		Category joke = new Category("Joke Reviews");
-		Category pieces = new Category("Short Pieces");
+		Tag top10 = new Tag("Top 10s");
+		Tag joke = new Tag("Joke Reviews");
+		Tag pieces = new Tag("Short Pieces");
 		top10 = categoryRepo.save(top10);
 		joke = categoryRepo.save(joke);
 		pieces = categoryRepo.save(pieces);
